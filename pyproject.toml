@@ -10,7 +10,7 @@ requires-python = ">=3.10"
 dependencies = [
     "torch>=2.0.0",
     "torchaudio>=2.0.0",
-    "transformers>=4.44.0,<5.0.0",
+    "transformers>=4.44.0,<4.45.0",
     "diffusers>=0.27.0",
     "librosa>=0.10.0",
     "soundfile>=0.12.0",
@@ -21,6 +21,7 @@ dependencies = [
     "WeTextProcessing>=1.0.0",
     "sentencex>=0.6.0",
     "huggingface_hub",
+    "fairseq",
 ]
 
 [tool.setuptools]
