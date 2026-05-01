@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fireredtts"
+version = "0.2.0"
+description = "FireRedTTS-1S: LLM-empowered foundation TTS system"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.0.0",
+    "torchaudio>=2.0.0",
+    "transformers>=4.44.0",
+    "diffusers>=0.27.0",
+    "librosa>=0.10.0",
+    "soundfile>=0.12.0",
+    "einops>=0.8.0",
+    "tiktoken>=0.7.0",
+    "inflect>=7.0.0",
+    "lingua-language-detector>=2.0.0",
+    "WeTextProcessing>=1.0.0",
+    "sentencex>=0.6.0",
+    "huggingface_hub",
+]
+
+[tool.setuptools]
+packages = { find = { where = ["."], include = ["fireredtts*"] } }
+
+[tool.setuptools.package-data]
+"fireredtts" = ["**/*.json", "**/*.txt"]
