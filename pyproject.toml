@@ -21,7 +21,9 @@ dependencies = [
     "WeTextProcessing>=1.0.0",
     "sentencex>=0.6.0",
     "huggingface_hub",
-    "fairseq",
+    # PyPI fairseq (0.10.2 broken sdist; 0.12.2 pins omegaconf<2.1) won't install
+    # on the modern stack — use the git version.
+    "fairseq @ git+https://github.com/facebookresearch/fairseq.git",
 ]
 
 [tool.setuptools]
